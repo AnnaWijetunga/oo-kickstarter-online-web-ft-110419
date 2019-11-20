@@ -8,10 +8,10 @@ class Project
     @backers = []
   end 
   
-  # def add_backer(backer)
-  #   @backers << backer 
-  #   backer.back_projects(self) unless backer.projects.include?(self)
-  # end 
+  def add_backer(backer)
+    @backers << backer 
+    backer.back_projects(self) unless backer.projects.include?(self)
+  end 
 end 
 
 # whenever back_project() is called to update @backed_projects, the project should also update its @backers list
